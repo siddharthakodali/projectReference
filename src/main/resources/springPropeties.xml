@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="triangle" class="com.projectreference.reference.springDependency.Triangle" autowire="byName">
+        <property name="details" value="Equilateral"/>
+        <property name="pointerA" ref="pontA"/>
+        <property name="pointerB" ref="pontB"/>
+        <property name="pointerC" ref="pontC"/>
+        <constructor-arg type="java.lang.String" value="EquilateralTraingle"/>
+        <constructor-arg type="int" value="20"/>
+    </bean>
+
+    <bean id="pontA" class="com.projectreference.reference.springDependency.point">
+        <property name="x" value="0"/>
+        <property name="y" value="20"/>
+    </bean>
+    <bean id="pontB" class="com.projectreference.reference.springDependency.point">
+        <property name="x" value="20"/>
+        <property name="y" value="0"/>
+    </bean>
+    <bean id="pontC" class="com.projectreference.reference.springDependency.point">
+        <property name="x" value="20"/>
+        <property name="y" value="20"/>
+    </bean>
+
+    <alias name="triangle" alias="triangle-alias"/>
+
+</beans>

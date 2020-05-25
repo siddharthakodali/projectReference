@@ -1,6 +1,8 @@
 plugins {
     id 'org.springframework.boot' version '2.3.0.RELEASE'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    //id 'io.jsonwebtoken' version '0.9.1'
+    //id 'javax.xml.bind' version '2.3.0'
     id 'java'
 }
 
@@ -16,12 +18,17 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+    //implementation 'io.jsonwebtoken:jjwt'
+    implementation 'javax.xml.bind:jaxb-api'
+    //implementation 'org.springframework.boot:spring-boot-starter-data-ldap'
+    //implementation 'org.springframework.boot:spring-boot-starter-jdbc'
     runtimeOnly 'com.h2database:h2'
     //runtimeOnly 'org.apache.derby:derby'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
+    //testImplementation 'com.unboundid:unboundid-ldapsdk'
     testImplementation 'org.springframework.security:spring-security-test'
 }
 

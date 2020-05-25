@@ -1,4 +1,4 @@
-INSERT INTO users(username, password, enabled)
+/*INSERT INTO users(username, password, enabled)
 values('user','user',true );
 
 INSERT INTO users(username, password, enabled)
@@ -8,4 +8,4 @@ INSER INTO authorities(username, authority)
 values ('user', 'ROLE_USER');
 
 INSER INTO authorities(username, authority)
-values ('admin', 'ROLE_USER')
+values ('admin', 'ROLE_USER')*/
